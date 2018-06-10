@@ -10,6 +10,7 @@ class Application
     else
       resp.write = "Page Not Found"
       resp.status = 404
+    end
 
   end
 
