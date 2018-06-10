@@ -22,7 +22,7 @@ class Application
 
   def add_item(item)
     if @@items.include?(item)
-
+      return item.price
     end
   end
 end
