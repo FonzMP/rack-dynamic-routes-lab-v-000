@@ -10,6 +10,7 @@ class Application
     if req.path.match(/items/)
       item_name = req.path.split("/items/").last
       item = @@items.find {|i| i.name == item_name}
+      if !item
       resp.write add_item(item)
     else
       resp.write "Route not found"
@@ -23,9 +24,7 @@ class Application
   def add_item(item)
     if @@items.include?(item)
       item.price
-    else
-      resp.write "Item not found"
-      resp.status = 400
+      
     end
   end
 end
