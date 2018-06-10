@@ -12,7 +12,7 @@ class Application
       item = @@items.find {|i| i.name == item_name}
       resp.write item.name
     else
-      resp.write = "Page Not Found"
+      return"Page Not Found"
       resp.status = 404
     end
 
