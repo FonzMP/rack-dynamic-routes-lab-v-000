@@ -23,6 +23,9 @@ class Application
   def add_item(item)
     if @@items.include?(item)
       return item.price
+    else
+      return "Item not found"
+      resp.status = 400
     end
   end
 end
