@@ -5,7 +5,7 @@ class Application
     resp = Rack::Response.new
     req = Rack::Response.new(env)
 
-    if req.path=="/items"
+    if req.path.match(/items/)
       resp.write "You found the items page"
     else
       resp.write = "Page Not Found"
