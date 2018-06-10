@@ -6,7 +6,8 @@ class Application
     req = Rack::Response.new(env)
 
     if req.path.match(/items/)
-      resp.write "You found the items page"
+      item_name = req.path.split("/items/").last
+      item = @@items.find {|i| i.name == item_name}
     else
       resp.write = "Page Not Found"
       resp.status = 404
