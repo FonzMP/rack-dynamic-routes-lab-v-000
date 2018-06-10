@@ -7,6 +7,9 @@ class Application
 
     if req.write.match(/items/)
       resp.write "Found item."
+    else
+      resp.write = "Page Not Found"
+      resp.status = 404
 
   end
 
