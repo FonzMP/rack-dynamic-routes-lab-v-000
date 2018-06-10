@@ -22,7 +22,7 @@ class Application
 
   def add_item(item)
     if @@items.include?(item)
-      return item.price
+      item.price
     else
       resp.write "Item not found"
       resp.status = 400
