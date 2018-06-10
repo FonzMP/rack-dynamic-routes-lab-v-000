@@ -6,7 +6,7 @@ class Application
     req = Rack::Response.new(env)
 
     if req.write.match(/items/)
-      resp.write "#{items}"
+      resp.write "Found item."
 
   end
 
