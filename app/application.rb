@@ -20,7 +20,7 @@ class Application
 
   end
 
-  def add_item
+  def add_item(item)
 
   end
 end
